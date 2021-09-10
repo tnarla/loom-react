@@ -7,6 +7,6 @@ export default defineConfig({
   },
   plugins: [reactRefresh()],
   define: {
-    global: 'globalThis'
-  }
+    global: "globalThis",
+  },
 });

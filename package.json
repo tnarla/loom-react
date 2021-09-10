@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "description": "A library to help you integrate the Loom SDK with React.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "pnpm run typecheck",
-    "example": "vite ./example/"
+    "example": "vite ./example/",
+    "build": "rm -rf ./dist && tsc",
+    "prepublishOnly": "pnpm run build"
   },
   "author": "Loom",
   "license": "MIT",
