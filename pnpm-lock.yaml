@@ -5,8 +5,9 @@ specifiers:
   '@types/react': ^17.0.20
   '@types/react-dom': ^17.0.9
   '@vitejs/plugin-react-refresh': ^1.3.6
-  react: ^17.0.2
-  react-dom: ^17.0.2
+  react: 0.0.0-experimental-806aaa2e2-20210913
+  react-dom: 0.0.0-experimental-806aaa2e2-20210913
+  react-error-boundary: ^3.1.3
   typescript: ^4.4.2
   vite: ^2.5.4
 
@@ -17,8 +18,9 @@ devDependencies:
   '@types/react': 17.0.20
   '@types/react-dom': 17.0.9
   '@vitejs/plugin-react-refresh': 1.3.6
-  react: 17.0.2
-  react-dom: 17.0.2_react@17.0.2
+  react: 0.0.0-experimental-806aaa2e2-20210913
+  react-dom: 0.0.0-experimental-806aaa2e2-20210913_53fbfa25f6ee5ce1c7ef227d5e223e47
+  react-error-boundary: 3.1.3_53fbfa25f6ee5ce1c7ef227d5e223e47
   typescript: 4.4.2
   vite: 2.5.4
 
@@ -226,6 +228,13 @@ packages:
     dependencies:
       '@babel/core': 7.15.5
       '@babel/helper-plugin-utils': 7.14.5
+    dev: true
+
+  /@babel/runtime/7.15.4:
+    resolution: {integrity: sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.9
     dev: true
 
   /@babel/template/7.15.4:
@@ -507,15 +516,25 @@ packages:
       source-map-js: 0.6.2
     dev: true
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/0.0.0-experimental-806aaa2e2-20210913_53fbfa25f6ee5ce1c7ef227d5e223e47:
+    resolution: {integrity: sha512-7Mokmqrdx/IkcPxlhq3gDHstejsspEYBBhL+9UsSI7F6gWpf57qLA5zaPXA8vdvAwSASHdJDYA0wtVpjUbIkjQ==}
     peerDependencies:
-      react: 17.0.2
+      react: 0.0.0-experimental-806aaa2e2-20210913
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 0.0.0-experimental-806aaa2e2-20210913
+      scheduler: 0.0.0-experimental-806aaa2e2-20210913
+    dev: true
+
+  /react-error-boundary/3.1.3_53fbfa25f6ee5ce1c7ef227d5e223e47:
+    resolution: {integrity: sha512-A+F9HHy9fvt9t8SNDlonq01prnU8AmkjvGKV4kk8seB9kU3xMEO8J/PQlLVmoOIDODl5U2kufSBs4vrWIqhsAA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.15.4
+      react: 0.0.0-experimental-806aaa2e2-20210913
     dev: true
 
   /react-refresh/0.10.0:
@@ -523,12 +542,16 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  /react/0.0.0-experimental-806aaa2e2-20210913:
+    resolution: {integrity: sha512-4hv3tuvwDCN9Pe0m8nuvcMQCcNrbKQaH44Ldk1fUm0et2GDnpiMWm2oKK9tSlkG0kWhA4swAt0dHA6TbpFRNNw==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
+
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
     dev: true
 
   /resolve/1.20.0:
@@ -550,8 +573,8 @@ packages:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
     dev: true
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.0.0-experimental-806aaa2e2-20210913:
+    resolution: {integrity: sha512-wo1CSWsRa9uMEGZwFaCQVjG+wMEzOPrGPILEvy5PxGVFO8NF6Hr/64DP5Mlovan8hqsK1GrD1cPe32c4X2uK/g==}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1

@@ -1,16 +1,23 @@
 /// <reference types="vite/client" />
 
-import { render } from "react-dom";
-import { LoomButton } from "../src";
+import { Suspense } from "react";
+import { createRoot } from "react-dom";
+import { ErrorBoundary } from "react-error-boundary";
+import { LoomButton } from "../src/suspense";
 
-render(
-  <LoomButton
-    apiKey={import.meta.env.VITE_LOOM_API_KEY as string}
-    onInsertClicked={(data) => {
-      console.log("Insert Clicked", data);
-    }}
+createRoot(document.getElementById("root")!).render(
+  <ErrorBoundary
+    fallbackRender={(props) => <div>Error: {JSON.stringify(props.error)}</div>}
   >
-    Record
-  </LoomButton>,
-  document.getElementById("root")!
+    <Suspense fallback="Loading Loom SDK...">
+      <LoomButton
+        apiKey={import.meta.env.VITE_LOOM_API_KEY as string}
+        onInsertClicked={(data) => {
+          console.log("Insert Clicked", data);
+        }}
+      >
+        Record
+      </LoomButton>
+    </Suspense>
+  </ErrorBoundary>
 );
